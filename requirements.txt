@@ -1,0 +1,12 @@
+# STT
+faster-whisper
+sounddevice
+numpy
+scipy
+
+# LLM
+ollama  # also run: ollama run phi3
+
+# TTS
+pyttsx3
+elevenlabs

@@ -1,5 +1,5 @@
 import sys
-from whisper_stt import SpeechToText
+from app.stt.whisper_stt import SpeechToText
 
 def main():
     print("Initializing Speech-to-Text module...")
