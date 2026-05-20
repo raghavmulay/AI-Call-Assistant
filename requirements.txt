@@ -9,4 +9,8 @@ ollama  # also run: ollama run phi3
 
 # TTS
 pyttsx3
+python-dotenv
 elevenlabs
+
+langchain 
+pymupdf
