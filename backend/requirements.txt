@@ -1,0 +1,32 @@
+# ==============================================================================
+# Real-Time AI Campus Assistant — Backend Requirements
+# ==============================================================================
+# Install with: pip install -r backend/requirements.txt
+
+# ── Web Framework ──────────────────────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0          # ASGI server with WebSocket support
+
+# ── Database ───────────────────────────────────────────────────────────────────
+sqlalchemy==2.0.30                 # ORM with async support
+asyncpg==0.29.0                    # Async PostgreSQL driver (used by SQLAlchemy)
+alembic==1.13.1                    # Database migration tool
+
+# ── Authentication ────────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0   # JWT creation & verification
+passlib[bcrypt]==1.7.4             # Password hashing (bcrypt)
+python-multipart==0.0.9            # Required for OAuth2PasswordBearer form parsing
+
+# ── Configuration ─────────────────────────────────────────────────────────────
+pydantic==2.7.1                    # Data validation (Pydantic v2)
+pydantic[email]==2.7.1             # EmailStr support (requires email-validator)
+pydantic-settings==2.2.1           # BaseSettings for .env config loading
+python-dotenv==1.0.1               # .env file loading
+
+# ── CORS & Middleware ─────────────────────────────────────────────────────────
+starlette==0.37.2                  # Pulled in by FastAPI; explicit for middleware
+
+# ── Development / Testing (optional) ─────────────────────────────────────────
+httpx==0.27.0                      # Async HTTP client for testing FastAPI routes
+pytest==8.2.0
+pytest-asyncio==0.23.6
