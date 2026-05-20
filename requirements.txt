@@ -12,5 +12,9 @@ pyttsx3
 python-dotenv
 elevenlabs
 
-langchain 
+ 
 pymupdf
+nltk
+sentence-transformers
+chromadb
+pdfplumber
