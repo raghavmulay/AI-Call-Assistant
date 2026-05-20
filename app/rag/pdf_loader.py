@@ -23,7 +23,7 @@ def extract_tables(page):
 
     tables = page.extract_tables()
 
-    table_text = ""
+    rows = []
 
     for table in tables:
 
@@ -36,9 +36,9 @@ def extract_tables(page):
                 for cell in row
             ]
 
-            table_text += " | ".join(cleaned_row) + "\n"
+            rows.append(" | ".join(cleaned_row))
 
-    return table_text
+    return "\n".join(rows)
 
 
 def load_pdfs():

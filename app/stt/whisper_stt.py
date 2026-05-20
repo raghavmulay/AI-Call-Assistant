@@ -6,6 +6,7 @@ import sounddevice as sd
 import scipy.io.wavfile as wav
 from collections import deque
 from faster_whisper import WhisperModel
+import time
 
 class SpeechToText:
     def __init__(self, model_size="base"):
@@ -15,7 +16,7 @@ class SpeechToText:
         """
         self.sample_rate = 16000
         self.channels = 1
-        self.model = WhisperModel(model_size, device="cpu", compute_type="int8")
+        self.model = WhisperModel("tiny", device="cpu", compute_type="int8")
         self._q = queue.Queue()
 
     def _audio_callback(self, indata, frames, time, status):
@@ -30,7 +31,7 @@ class SpeechToText:
         Uses RMS energy detection to start and stop recording automatically.
         """
         energy_threshold = 0.015  # Adjust threshold based on background noise
-        silence_duration = 1.5    # Hold duration for silence (in seconds)
+        silence_duration = 0.5    # Hold duration for silence (in seconds)
         chunk_duration = 0.1      # Audio chunk size (in seconds)
 
         chunk_samples = int(self.sample_rate * chunk_duration)
@@ -109,9 +110,12 @@ class SpeechToText:
             return ""
 
         try:
+            start = time.time()
             # Beam size tuning: 5 is a good balance between speed and accuracy
-            segments, info = self.model.transcribe(audio_path, beam_size=5)
+            segments, info = self.model.transcribe(audio_path, beam_size=1)
             transcription = "".join([segment.text for segment in segments])
+            end = time.time()
+            print(f"[STT Time]: {end - start:.2f} seconds")
             return transcription.strip()
         except Exception as e:
             print(f"Transcription Error: {e}")

@@ -1,19 +1,33 @@
 import ollama
+import time
 
 SYSTEM_PROMPT = (
-    "You are a college administration assistant. "
-    "Answer questions about the college briefly and directly. "
-    "Keep responses under 2 sentences. "
-    "If you don't know something, say: 'I don't have that information. Please contact the admin office.'"
+    "You are a college assistant. "
+    "Reply in one short natural sentence only."
 )
 
 def generate_response(text: str) -> str:
-    """Send user query to local Phi-3 Mini via Ollama and return the response."""
+
+    start = time.time()
+
     response = ollama.chat(
-        model="phi3",
+        model="phi3:mini",
+
         messages=[
             {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user",   "content": text},
-        ]
+            {"role": "user", "content": text},
+        ],
+
+        options={
+            "num_predict": 20,
+            "temperature": 0.3,
+            "top_k": 20,
+            "top_p": 0.7
+        }
     )
+
+    end = time.time()
+
+    print(f"[LLM Time]: {end - start:.2f} seconds")
+
     return response["message"]["content"].strip()

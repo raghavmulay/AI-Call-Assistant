@@ -1,16 +1,26 @@
-import os
-from dotenv import load_dotenv
-from elevenlabs import ElevenLabs
-from elevenlabs.play import play
-
-load_dotenv()
-_client = ElevenLabs(api_key=os.getenv("API_KEY_ELEVEN_LABS"))
+import pyttsx3
+import time
 
 def speak(text: str) -> None:
+
     print(f"[Assistant]: {text}")
-    audio = _client.text_to_speech.convert(
-        text=text,
-        voice_id="nPczCjzI2devNBz1zQrb",  # Brian
-        model_id="eleven_flash_v2"
-    )
-    play(audio)
+
+    start = time.time()
+
+    engine = pyttsx3.init()
+
+    engine.setProperty('rate', 200)
+    engine.setProperty('volume', 1.0)
+
+    voices = engine.getProperty('voices')
+
+    if voices:
+        engine.setProperty('voice', voices[1].id)
+
+    engine.say(text)
+
+    engine.runAndWait()
+
+    end = time.time()
+
+    print(f"[TTS Time]: {end - start:.2f} seconds")
