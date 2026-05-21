@@ -1,0 +1,22 @@
+{
+  "admission_schedule": {
+    "application_start": "1st June 2025",
+    "application_end": "30th June 2025",
+    "merit_list_1": "10th July 2025",
+    "merit_list_2": "20th July 2025",
+    "document_verification": "11th July – 15th July 2025",
+    "fee_payment_deadline": "18th July 2025",
+    "classes_begin": "1st August 2025"
+  },
+  "cutoff_info": {
+    "general": "Above 75% in PCM",
+    "obc": "Above 65% in PCM",
+    "sc_st": "Above 50% in PCM",
+    "note": "Cutoffs vary by branch. Check official website for branch-wise cutoffs."
+  },
+  "eligibility": {
+    "minimum_qualification": "12th pass with Physics, Chemistry, Mathematics",
+    "minimum_percentage": "50% aggregate (45% for reserved categories)",
+    "entrance_exam": "MHT-CET or JEE Main score required"
+  }
+}

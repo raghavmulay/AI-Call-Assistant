@@ -1,20 +1,21 @@
-# STT
-faster-whisper
-sounddevice
-numpy
-scipy
+# ── STT ───────────────────────────────────────────────────────────
+faster-whisper          # Whisper model (faster-whisper library)
+sounddevice             # Microphone input
+numpy                   # Audio array processing
+scipy                   # WAV file writing
 
-# LLM
-ollama  # also run: ollama run phi3
+# ── TTS ───────────────────────────────────────────────────────────
+edge-tts                # Microsoft Edge neural TTS
+pygame                  # Audio playback for edge-tts output
 
-# TTS
-pyttsx3
-python-dotenv
-elevenlabs
+# ── LLM ───────────────────────────────────────────────────────────
+ollama                  # Local LLM via Ollama (run: ollama pull phi3:mini)
 
- 
-pymupdf
-nltk
-sentence-transformers
-chromadb
-pdfplumber
+# ── RAG ───────────────────────────────────────────────────────────
+sentence-transformers   # Embeddings (all-MiniLM-L6-v2)
+chromadb                # Vector store
+pymupdf                 # PDF text extraction (fitz)
+pdfplumber              # PDF table extraction
+
+# ── Utilities ─────────────────────────────────────────────────────
+python-dotenv           # .env file loading
