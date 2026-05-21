@@ -17,5 +17,8 @@ chromadb                # Vector store
 pymupdf                 # PDF text extraction (fitz)
 pdfplumber              # PDF table extraction
 
+# ── Database ─────────────────────────────────────────────────────
+psycopg[binary]         # PostgreSQL driver (psycopg v3)
+
 # ── Utilities ─────────────────────────────────────────────────────
 python-dotenv           # .env file loading
