@@ -1,0 +1,26 @@
+{
+  "tuition_fee": {
+    "first_year": "Rs. 1,20,000 per year",
+    "second_year": "Rs. 1,20,000 per year",
+    "third_year": "Rs. 1,20,000 per year",
+    "fourth_year": "Rs. 1,20,000 per year"
+  },
+  "by_branch": {
+    "computer engineering": "Rs. 1,20,000 per year",
+    "information technology": "Rs. 1,20,000 per year",
+    "electronics and telecommunication": "Rs. 1,10,000 per year",
+    "mechanical engineering": "Rs. 1,00,000 per year",
+    "civil engineering": "Rs. 95,000 per year",
+    "electrical engineering": "Rs. 1,00,000 per year"
+  },
+  "hostel_fee": {
+    "per_year": "Rs. 60,000 per year (includes mess)"
+  },
+  "other_fees": {
+    "exam_fee": "Rs. 2,000 per semester",
+    "library_fee": "Rs. 1,500 per year",
+    "development_fee": "Rs. 5,000 per year"
+  },
+  "payment_modes": ["Online NEFT/RTGS", "DD in favour of college", "Online portal"],
+  "scholarship_note": "SC/ST/OBC students may be eligible for government scholarships. Contact admin for details."
+}
