@@ -22,13 +22,13 @@ class TranscriptState:
 
     def finalize(self) -> str:
         """Commit partial as final, archive it, return the final text."""
-        text = (self.partial or self.final).strip()
+        text = self.partial.strip()
         if text:
             self.final = text
             self.history.append(text)
             self.finalized_at = time.time()
         self.partial = ""
-        return self.final
+        return text
 
     def clear(self):
         """Reset for next turn."""

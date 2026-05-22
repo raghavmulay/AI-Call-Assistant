@@ -49,8 +49,11 @@ async def lifespan(app: FastAPI):
     Runs on shutdown: (add cleanup here if needed, e.g. closing connections)
     """
     logger.info("🚀 Starting AI Campus Assistant Backend...")
-    await create_all_tables()
-    logger.info("✅ Database tables verified/created.")
+    try:
+        await create_all_tables()
+        logger.info("✅ Database tables verified/created.")
+    except Exception as e:
+        logger.error(f"⚠️ Database connection failed: {e}. Running without DB...")
     cleanup_task = asyncio.create_task(run_session_cleanup())
     logger.info("✅ Real-time session cleanup task started.")
     yield

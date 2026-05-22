@@ -12316,3 +12316,3153 @@ Current User Query: I don't know what you're gonna do.
 ========================================================================
 
 2026-05-22 15:57:39 | INFO     | backend.app.core.redis:client:18 - Redis client initialized: redis://localhost:6379/0
+2026-05-22 16:33:24 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: 97e3360f-5f72-433f-a3f7-b320fb679502
+2026-05-22 16:33:24 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:24 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:26 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : 97e3360f-5f72-433f-a3f7-b320fb679502
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 80 chars
+    - Latency        : 0.15ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Retrieved Data / Background: <test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2B8998E0>
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "I'm unable to access the attendance data."
+    - Latency        : 1.6249s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "I'm unable to access the attendance data."
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 1.6257s
+========================================================================
+
+2026-05-22 16:33:26 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: test_general_2c316f6a-48e0-4820-8e22-e921d45dcf7b
+2026-05-22 16:33:26 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:26 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : test_general_2c316f6a-48e0-4820-8e22-e921d45dcf7b
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve complex problems by breaking them down into smaller, more manageable parts.'
+    - Latency        : 0.8210s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve complex problems by breaking them down into smaller, more manageable parts.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.8212s
+========================================================================
+
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is machine learning?' | session: test_general_6be9200a-2170-4a16-a3fc-50b2f6902c41
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: None
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is machine learning?'
+ [Session ID]        : test_general_6be9200a-2170-4a16-a3fc-50b2f6902c41
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: None
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: What is machine learning?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Machine learning is a type of artificial intelligence that enables computers to learn from data and improve their performance on a task without being explicitly programmed. It involves training algorithms on large datasets to make predictions or decisions.'
+    - Latency        : 0.1732s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Machine learning is a type of artificial intelligence that enables computers to learn from data and improve their performance on a task without being explicitly programmed. It involves training algorithms on large datasets to make predictions or decisions.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.1733s
+========================================================================
+
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Tell me about hostel' | session: test_multi_2150dc06-bef2-4dbc-bb9f-bcb413ea659b
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Tell me about hostel'
+ [Session ID]        : test_multi_2150dc06-bef2-4dbc-bb9f-bcb413ea659b
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 72.92ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.04ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0731s
+========================================================================
+
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Are AC rooms available?' | session: test_multi_2150dc06-bef2-4dbc-bb9f-bcb413ea659b
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:27 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Are AC rooms available?'
+ [Session ID]        : test_multi_2150dc06-bef2-4dbc-bb9f-bcb413ea659b
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 4 messages
+    - Active Branch  : computer engineering
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+--- RECENT CONVERSATION ---
+USER: Tell me about hostel
+ASSISTANT: The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.
+----------------------------
+
+Current User Query: Are AC rooms available?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'No, AC rooms are not available in the hostel.'
+    - Latency        : 0.8806s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'No, AC rooms are not available in the hostel.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.8808s
+========================================================================
+
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What are the fees?' | session: test_multi_2150dc06-bef2-4dbc-bb9f-bcb413ea659b
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: fees (conf: 0.4) | entity: None
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What are the fees?'
+ [Session ID]        : test_multi_2150dc06-bef2-4dbc-bb9f-bcb413ea659b
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 6 messages
+    - Active Branch  : computer engineering
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : fees
+    - Sub-Intent     : None
+    - Confidence     : 0.40
+    - Extracted Entity: None
+    - Latency        : 0.04ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:fees']
+    - Has Data       : True
+    - Context Length : 240 chars
+    - Latency        : 13.44ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Tuition fees vary by branch — Computer Engineering: Rs. 1,20,000 per year, Information Technology: Rs. 1,20,000 per year, Electronics And Telecommunication: Rs. 1,10,000 per year, and more. Hostel fee is Rs. 60,000 per year (includes mess).'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Tuition fees vary by branch — Computer Engineering: Rs. 1,20,000 per year, Information Technology: Rs. 1,20,000 per year, Electronics And Telecommunication: Rs. 1,10,000 per year, and more. Hostel fee is Rs. 60,000 per year (includes mess).'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0137s
+========================================================================
+
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What are hostel fees?' | session: test_fail_778b64e5-ae97-4ac0-9009-7cbd44568caf
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What are hostel fees?'
+ [Session ID]        : test_fail_778b64e5-ae97-4ac0-9009-7cbd44568caf
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 2.54ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0027s
+========================================================================
+
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Tell me about placements' | session: test_fail_778b64e5-ae97-4ac0-9009-7cbd44568caf
+2026-05-22 16:33:28 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Redis disconnected.
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: placements (conf: 0.4) | entity: None
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Tell me about placements'
+ [Session ID]        : test_fail_778b64e5-ae97-4ac0-9009-7cbd44568caf
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.10ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : placements
+    - Sub-Intent     : None
+    - Confidence     : 0.40
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:placements']
+    - Has Data       : True
+    - Context Length : 102 chars
+    - Latency        : 22.37ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Overall placement rate is 85% of eligible students. Average package: Rs. 4.5 LPA, highest: Rs. 18 LPA.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Overall placement rate is 85% of eligible students. Average package: Rs. 4.5 LPA, highest: Rs. 18 LPA.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0226s
+========================================================================
+
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: test_fail_778b64e5-ae97-4ac0-9009-7cbd44568caf
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:28 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : test_fail_778b64e5-ae97-4ac0-9009-7cbd44568caf
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 6 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:error']
+    - Has Data       : True
+    - Context Length : 50 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+--- RECENT CONVERSATION ---
+USER: Tell me about placements
+ASSISTANT: Overall placement rate is 85% of eligible students. Average package: Rs. 4.5 LPA, highest: Rs. 18 LPA.
+----------------------------
+
+Retrieved Data / Background: Student not authenticated or database unavailable.
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "I'm unable to access your attendance records due to database unavailability."
+    - Latency        : 0.6234s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "I'm unable to access your attendance records due to database unavailability."
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.6235s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Tell me about hostel fees' | session: 17f08a3d-21eb-40b1-b103-c6f0c9facc1a
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: fees (conf: 0.8) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain machine learning' | session: 0869124e-ae32-4813-9c5f-76f8bc3a1222
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Show my attendance' | session: 652fdd7f-8149-4c5b-ad55-4fca1acad234
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.8) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:29 | ERROR    | backend.app.ai.orchestrator.services:get_database_data:86 - Database service error: object MagicMock can't be used in 'await' expression
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: 17df4071-cb9c-42c2-ae6a-d403ab20606b
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What scholarships exist?' | session: 01c6632c-4725-45bd-85c5-5e0e4f1e3553
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: scholarship (conf: 0.4583333333333333) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Tell me about hostel fees'
+ [Session ID]        : 17f08a3d-21eb-40b1-b103-c6f0c9facc1a
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : fees
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:fees']
+    - Has Data       : True
+    - Context Length : 240 chars
+    - Latency        : 42.46ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Tuition fees vary by branch — Computer Engineering: Rs. 1,20,000 per year, Information Technology: Rs. 1,20,000 per year, Electronics And Telecommunication: Rs. 1,10,000 per year, and more. Hostel fee is Rs. 60,000 per year (includes mess).'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Tuition fees vary by branch — Computer Engineering: Rs. 1,20,000 per year, Information Technology: Rs. 1,20,000 per year, Electronics And Telecommunication: Rs. 1,10,000 per year, and more. Hostel fee is Rs. 60,000 per year (includes mess).'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0426s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What scholarships exist?'
+ [Session ID]        : 01c6632c-4725-45bd-85c5-5e0e4f1e3553
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : scholarship
+    - Sub-Intent     : None
+    - Confidence     : 0.46
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:scholarship']
+    - Has Data       : True
+    - Context Length : 131 chars
+    - Latency        : 3.58ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'EBC, OBC, SC/ST scholarships via MahaDBT portal. Merit scholarship for CGPA above 9.0. Contact scholarship@college.edu for details.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'EBC, OBC, SC/ST scholarships via MahaDBT portal. Merit scholarship for CGPA above 9.0. Contact scholarship@college.edu for details.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0038s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : 17df4071-cb9c-42c2-ae6a-d403ab20606b
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.5680s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.5682s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain machine learning'
+ [Session ID]        : 0869124e-ae32-4813-9c5f-76f8bc3a1222
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Explain machine learning
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Machine learning is a type of artificial intelligence that enables computers to learn from data and improve their performance on a task without being explicitly programmed. It involves training algorithms on large datasets to make predictions or decisions.'
+    - Latency        : 0.6636s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Machine learning is a type of artificial intelligence that enables computers to learn from data and improve their performance on a task without being explicitly programmed. It involves training algorithms on large datasets to make predictions or decisions.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.6638s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Show my attendance'
+ [Session ID]        : 652fdd7f-8149-4c5b-ad55-4fca1acad234
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 31 chars
+    - Latency        : 35.30ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Retrieved Data / Background: Database currently unavailable.
+
+Current User Query: Show my attendance
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "I'm unable to access your attendance records due to the database being unavailable."
+    - Latency        : 0.6272s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "I'm unable to access your attendance records due to the database being unavailable."
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.6627s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'what are hostel fees?' | session: bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'what are hostel fees?'
+ [Session ID]        : bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 1.08ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0013s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'what are hostel fees?' | session: bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'what are hostel fees?'
+ [Session ID]        : bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 4 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 0.66ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0008s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'what are hostel fees?' | session: bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'what are hostel fees?'
+ [Session ID]        : bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 6 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 0.82ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0010s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'what are hostel fees?' | session: bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'what are hostel fees?'
+ [Session ID]        : bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 8 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 0.63ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0008s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'what are hostel fees?' | session: bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'what are hostel fees?'
+ [Session ID]        : bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 10 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 2.36ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.05ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.04ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0026s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'what are hostel fees?' | session: bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'what are hostel fees?'
+ [Session ID]        : bench_structured_03fe30b0-268f-4af3-8e48-7be2bbdea9ab
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 12 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.02ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.13ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 1.95ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0028s
+========================================================================
+
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:29 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:31 | ERROR    | backend.app.ai.llm.async_llm:stream_generate:57 - Groq stream error: Connection error.
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 94 chars
+    - Latency        : 0.18ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Retrieved Data / Background: <backend.tests.test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2BA91EE0>
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "I'm having trouble connecting right now."
+    - Latency        : 1.2971s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "I'm having trouble connecting right now."
+    - Latency        : 0.26ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 1.2977s
+========================================================================
+
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 4 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 94 chars
+    - Latency        : 0.05ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+--- RECENT CONVERSATION ---
+USER: What is my attendance?
+ASSISTANT: I'm having trouble connecting right now.
+----------------------------
+
+Retrieved Data / Background: <backend.tests.test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2BA91EE0>
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'You have 85% attendance this semester.'
+    - Latency        : 0.2326s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'You have 85% attendance this semester.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.2328s
+========================================================================
+
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 6 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 94 chars
+    - Latency        : 0.06ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+--- RECENT CONVERSATION ---
+USER: What is my attendance?
+ASSISTANT: You have 85% attendance this semester.
+----------------------------
+
+Retrieved Data / Background: <backend.tests.test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2BA91EE0>
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'You have 85% attendance this semester.'
+    - Latency        : 0.1018s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'You have 85% attendance this semester.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.1020s
+========================================================================
+
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 8 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 94 chars
+    - Latency        : 0.05ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+--- RECENT CONVERSATION ---
+USER: What is my attendance?
+ASSISTANT: You have 85% attendance this semester.
+----------------------------
+
+Retrieved Data / Background: <backend.tests.test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2BA91EE0>
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'You have 85% attendance this semester.'
+    - Latency        : 0.2049s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'You have 85% attendance this semester.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.2051s
+========================================================================
+
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 10 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 94 chars
+    - Latency        : 0.05ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.02ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+--- RECENT CONVERSATION ---
+USER: What is my attendance?
+ASSISTANT: You have 85% attendance this semester.
+----------------------------
+
+Retrieved Data / Background: <backend.tests.test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2BA91EE0>
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'You have 85% attendance this semester.'
+    - Latency        : 0.1011s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'You have 85% attendance this semester.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.1013s
+========================================================================
+
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : bench_database_52a6e746-08bd-4243-bdf7-c1c9a8fec663
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 12 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 94 chars
+    - Latency        : 0.05ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+--- RECENT CONVERSATION ---
+USER: What is my attendance?
+ASSISTANT: You have 85% attendance this semester.
+----------------------------
+
+Retrieved Data / Background: <backend.tests.test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2BA91EE0>
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'You have 85% attendance this semester.'
+    - Latency        : 0.2104s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'You have 85% attendance this semester.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.2107s
+========================================================================
+
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.1448s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.1449s
+========================================================================
+
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 4 messages
+    - Active Branch  : computer engineering
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+[Context: Student/Query belongs to computer engineering branch]
+--- RECENT CONVERSATION ---
+USER: Explain recursion
+ASSISTANT: Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.
+----------------------------
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.3608s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.3609s
+========================================================================
+
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 6 messages
+    - Active Branch  : computer engineering
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+[Context: Student/Query belongs to computer engineering branch]
+--- RECENT CONVERSATION ---
+USER: Explain recursion
+ASSISTANT: Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.
+----------------------------
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.2318s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.2319s
+========================================================================
+
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 8 messages
+    - Active Branch  : computer engineering
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+[Context: Student/Query belongs to computer engineering branch]
+--- RECENT CONVERSATION ---
+USER: Explain recursion
+ASSISTANT: Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.
+----------------------------
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.2778s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.2780s
+========================================================================
+
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 10 messages
+    - Active Branch  : computer engineering
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+[Context: Student/Query belongs to computer engineering branch]
+--- RECENT CONVERSATION ---
+USER: Explain recursion
+ASSISTANT: Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.
+----------------------------
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.2939s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.2941s
+========================================================================
+
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : bench_general_64d3611d-9848-4929-a8fa-302b20638d76
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 12 messages
+    - Active Branch  : computer engineering
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+[Context: Student/Query belongs to computer engineering branch]
+--- RECENT CONVERSATION ---
+USER: Explain recursion
+ASSISTANT: Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.
+----------------------------
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.1886s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve problems that can be broken down into smaller sub-problems of the same type.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.1888s
+========================================================================
+
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What are hostel fees?' | session: 1b52b1b2-7ea2-41d7-af81-2a57713dd173
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel (conf: 0.8) | entity: None
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Tell me about placements' | session: 055fee89-cad1-44e5-8e0c-05496e8d8b56
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: placements (conf: 0.4) | entity: None
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: 067a7d80-89b9-4c4e-9f42-23dbb5546756
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What scholarships exist?' | session: 94067265-4347-4d95-9c33-29b62d4134ef
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: scholarship (conf: 0.4583333333333333) | entity: None
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my attendance?' | session: 0ba0aa6c-e402-48f2-817e-8e8c9198c652
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: attendance (conf: 0.45454545454545453) | entity: None
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain OOP concepts' | session: 3db90616-eb75-4bf2-bb15-e57830dd8c7f
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain machine learning' | session: daaf5880-c130-4e01-8d09-0eef4f1c77eb
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Show my timetable' | session: f0e83945-b765-47d2-a4d2-e85afbbefbfb
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: timetable (conf: 0.8) | entity: None
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: database
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What facilities exist?' | session: d121eabf-ea02-482c-a7aa-dd9265e86259
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: information technology
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Are AC rooms available?' | session: 4dc079eb-59df-401b-834a-b5f9f867787f
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Hostel rules?' | session: d0adb51b-33d8-4fb2-ae37-bca0244416c6
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: hostel_rules (conf: 0.8461538461538461) | entity: None
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Cap process dates?' | session: f86cca4d-5970-425c-b80a-bc096f05f35e
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: admission_process (conf: 0.8) | entity: None
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Best branch for AI?' | session: d6af572b-cc3c-43b7-8cda-bcd858c3772c
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: branches (conf: 0.8) | entity: computer engineering
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: structured
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What subjects do I have today?' | session: 1de00676-1e0e-4ea6-836d-1d7c205e9210
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: syllabus_query (conf: 0.4) | entity: None
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Explain recursion' | session: b95e8e63-3576-4741-83d7-77e350344852
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: computer engineering
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What are hostel fees?'
+ [Session ID]        : 1b52b1b2-7ea2-41d7-af81-2a57713dd173
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:hostel']
+    - Has Data       : True
+    - Context Length : 181 chars
+    - Latency        : 20.24ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel fee is Rs. 60,000 per year including mess. Boys hostel: Yes, capacity 300, Girls hostel: Yes, capacity 200. Facilities include Wi-Fi, laundry, common room, 24x7 security.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0204s
+========================================================================
+
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Tell me about placements'
+ [Session ID]        : 055fee89-cad1-44e5-8e0c-05496e8d8b56
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.02ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : placements
+    - Sub-Intent     : None
+    - Confidence     : 0.40
+    - Extracted Entity: None
+    - Latency        : 0.12ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:placements']
+    - Has Data       : True
+    - Context Length : 102 chars
+    - Latency        : 18.85ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Overall placement rate is 85% of eligible students. Average package: Rs. 4.5 LPA, highest: Rs. 18 LPA.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Overall placement rate is 85% of eligible students. Average package: Rs. 4.5 LPA, highest: Rs. 18 LPA.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0198s
+========================================================================
+
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What scholarships exist?'
+ [Session ID]        : 94067265-4347-4d95-9c33-29b62d4134ef
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : scholarship
+    - Sub-Intent     : None
+    - Confidence     : 0.46
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:scholarship']
+    - Has Data       : True
+    - Context Length : 131 chars
+    - Latency        : 16.63ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'EBC, OBC, SC/ST scholarships via MahaDBT portal. Merit scholarship for CGPA above 9.0. Contact scholarship@college.edu for details.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'EBC, OBC, SC/ST scholarships via MahaDBT portal. Merit scholarship for CGPA above 9.0. Contact scholarship@college.edu for details.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0168s
+========================================================================
+
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Best branch for AI?'
+ [Session ID]        : d6af572b-cc3c-43b7-8cda-bcd858c3772c
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : branches
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: computer engineering
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:branches']
+    - Has Data       : True
+    - Context Length : 178 chars
+    - Latency        : 26.59ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The college offers 6 branches: Computer Engineering, Information Technology, Electronics and Telecommunication, Mechanical Engineering, Civil Engineering, Electrical Engineering.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The college offers 6 branches: Computer Engineering, Information Technology, Electronics and Telecommunication, Mechanical Engineering, Civil Engineering, Electrical Engineering.'
+    - Latency        : 0.04ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0268s
+========================================================================
+
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Cap process dates?'
+ [Session ID]        : f86cca4d-5970-425c-b80a-bc096f05f35e
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : admission_process
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : structured
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['JSON:admission_process']
+    - Has Data       : True
+    - Context Length : 129 chars
+    - Latency        : 27.67ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Admission process: Register on MHT-CET portal; Fill CAP application form; Upload documents online. Apply via cetcell.mahacet.org.'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Admission process: Register on MHT-CET portal; Fill CAP application form; Upload documents online. Apply via cetcell.mahacet.org.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.0278s
+========================================================================
+
+2026-05-22 16:33:33 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : 067a7d80-89b9-4c4e-9f42-23dbb5546756
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve complex problems by breaking them down into smaller, more manageable parts.'
+    - Latency        : 0.1845s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve complex problems by breaking them down into smaller, more manageable parts.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.1847s
+========================================================================
+
+2026-05-22 16:33:34 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What subjects do I have today?'
+ [Session ID]        : 1de00676-1e0e-4ea6-836d-1d7c205e9210
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : syllabus_query
+    - Sub-Intent     : None
+    - Confidence     : 0.40
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: What subjects do I have today?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'You have Math and English classes today.'
+    - Latency        : 0.5336s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'You have Math and English classes today.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.5339s
+========================================================================
+
+2026-05-22 16:33:34 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain OOP concepts'
+ [Session ID]        : 3db90616-eb75-4bf2-bb15-e57830dd8c7f
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.04ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Explain OOP concepts
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Object-Oriented Programming (OOP) concepts include encapsulation, inheritance, and polymorphism. These concepts help organize and structure code into reusable and modular components.'
+    - Latency        : 0.5427s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Object-Oriented Programming (OOP) concepts include encapsulation, inheritance, and polymorphism. These concepts help organize and structure code into reusable and modular components.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.5435s
+========================================================================
+
+2026-05-22 16:33:34 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain machine learning'
+ [Session ID]        : daaf5880-c130-4e01-8d09-0eef4f1c77eb
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.01ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Explain machine learning
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Machine learning is a type of artificial intelligence that enables computers to learn from data without being explicitly programmed. It involves training algorithms to make predictions or decisions based on patterns in the data.'
+    - Latency        : 0.6352s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Machine learning is a type of artificial intelligence that enables computers to learn from data without being explicitly programmed. It involves training algorithms to make predictions or decisions based on patterns in the data.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.6354s
+========================================================================
+
+2026-05-22 16:33:34 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Show my timetable'
+ [Session ID]        : f0e83945-b765-47d2-a4d2-e85afbbefbfb
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : timetable
+    - Sub-Intent     : None
+    - Confidence     : 0.80
+    - Extracted Entity: None
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:timetable']
+    - Has Data       : True
+    - Context Length : 94 chars
+    - Latency        : 0.05ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Retrieved Data / Background: <backend.tests.test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2BAACC50>
+
+Current User Query: Show my timetable
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "Your timetable is available on the student portal under the 'Academics' tab. Please log in to access it."
+    - Latency        : 0.6344s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "Your timetable is available on the student portal under the 'Academics' tab. Please log in to access it."
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 0.6346s
+========================================================================
+
+2026-05-22 16:33:34 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Are AC rooms available?'
+ [Session ID]        : 4dc079eb-59df-401b-834a-b5f9f867787f
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Are AC rooms available?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Yes, AC rooms are available in the dormitories. You can check the room availability on the campus website.'
+    - Latency        : 1.3486s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Yes, AC rooms are available in the dormitories. You can check the room availability on the campus website.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 1.3488s
+========================================================================
+
+2026-05-22 16:33:34 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my attendance?'
+ [Session ID]        : 0ba0aa6c-e402-48f2-817e-8e8c9198c652
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : attendance
+    - Sub-Intent     : None
+    - Confidence     : 0.45
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : database
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : ['DB:attendance']
+    - Has Data       : True
+    - Context Length : 94 chars
+    - Latency        : 0.22ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Retrieved Data / Background: <backend.tests.test_e2e_suite.MockDatabase.MockAttendanceSummary object at 0x0000017C2BAACC50>
+
+Current User Query: What is my attendance?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Your attendance summary is available upon request. Please check the student portal for detailed attendance records.'
+    - Latency        : 1.3566s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Your attendance summary is available upon request. Please check the student portal for detailed attendance records.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 1.3577s
+========================================================================
+
+2026-05-22 16:33:35 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What facilities exist?'
+ [Session ID]        : d121eabf-ea02-482c-a7aa-dd9265e86259
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: information technology
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: What facilities exist?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The campus has a library, cafeteria, gym, and student lounge. It also has computer labs and a medical center.'
+    - Latency        : 1.8596s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The campus has a library, cafeteria, gym, and student lounge. It also has computer labs and a medical center.'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 1.8597s
+========================================================================
+
+2026-05-22 16:33:37 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Explain recursion'
+ [Session ID]        : b95e8e63-3576-4741-83d7-77e350344852
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: computer engineering
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Explain recursion
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve complex problems by breaking them down into smaller sub-problems.'
+    - Latency        : 3.6933s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Recursion is a programming technique where a function calls itself repeatedly until it reaches a base case that stops the recursion. This allows the function to solve complex problems by breaking them down into smaller sub-problems.'
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 3.6935s
+========================================================================
+
+2026-05-22 16:33:38 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Hostel rules?'
+ [Session ID]        : d0adb51b-33d8-4fb2-ae37-bca0244416c6
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 0.00ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : hostel_rules
+    - Sub-Intent     : None
+    - Confidence     : 0.85
+    - Extracted Entity: None
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Hostel rules?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'The hostel has a 10 PM curfew and a no-guest policy after 9 PM. Quiet hours are observed from 10 PM to 8 AM.'
+    - Latency        : 4.7246s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'The hostel has a 10 PM curfew and a no-guest policy after 9 PM. Quiet hours are observed from 10 PM to 8 AM.'
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 4.7248s
+========================================================================
+
+2026-05-22 17:05:11 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Hello hello' | session: web-session-1
+2026-05-22 17:05:11 | INFO     | backend.app.core.redis:client:18 - Redis client initialized: redis://localhost:6379/0
+2026-05-22 17:05:15 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:05:19 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:05:19 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: greeting (conf: 1.0) | entity: None
+2026-05-22 17:05:19 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 17:05:23 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:05:27 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:05:31 | ERROR    | backend.app.ai.orchestrator.memory_manager:update_metadata:44 - Failed to update metadata in Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:05:31 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Hello hello'
+ [Session ID]        : web-session-1
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 8157.71ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : greeting
+    - Sub-Intent     : None
+    - Confidence     : 1.00
+    - Extracted Entity: None
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : True
+    - Context Length : 32 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Hello! How can I help you today?'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Hello! How can I help you today?'
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 12218.32ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 20.3764s
+========================================================================
+
+2026-05-22 17:05:45 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Hello, how are you?' | session: web-session-1
+2026-05-22 17:05:49 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:05:53 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:05:53 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: None
+2026-05-22 17:05:53 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 17:05:58 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:05:59 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Hello, how are you?' | session: web-session-1
+2026-05-22 17:06:02 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:03 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:06 | ERROR    | backend.app.ai.orchestrator.memory_manager:update_metadata:44 - Failed to update metadata in Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:06 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Hello, how are you?'
+ [Session ID]        : web-session-1
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 8093.74ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: None
+    - Latency        : 0.05ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Hello, how are you?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "I'm doing well, thank you for asking. How can I assist you today?"
+    - Latency        : 0.5342s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "I'm doing well, thank you for asking. How can I assist you today?"
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 12226.36ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 20.8551s
+========================================================================
+
+2026-05-22 17:06:08 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:08 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: general_chat (conf: 0.0) | entity: None
+2026-05-22 17:06:08 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 17:06:12 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my syllabus?' | session: web-session-1
+2026-05-22 17:06:12 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:15 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my syllabus?' | session: web-session-1
+2026-05-22 17:06:16 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:16 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:19 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:20 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:20 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: syllabus_query (conf: 0.4) | entity: None
+2026-05-22 17:06:20 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 17:06:20 | ERROR    | backend.app.ai.orchestrator.memory_manager:update_metadata:44 - Failed to update metadata in Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:20 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Hello, how are you?'
+ [Session ID]        : web-session-1
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 8120.45ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : general_chat
+    - Sub-Intent     : None
+    - Confidence     : 0.00
+    - Extracted Entity: None
+    - Latency        : 0.12ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: Hello, how are you?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "I'm doing well, thank you for asking. How can I assist you today?"
+    - Latency        : 0.3158s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "I'm doing well, thank you for asking. How can I assist you today?"
+    - Latency        : 0.07ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 12412.21ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 20.8506s
+========================================================================
+
+2026-05-22 17:06:23 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:23 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: syllabus_query (conf: 0.4) | entity: None
+2026-05-22 17:06:23 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 17:06:24 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:27 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:28 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:32 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:32 | ERROR    | backend.app.ai.orchestrator.memory_manager:update_metadata:44 - Failed to update metadata in Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:32 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my syllabus?'
+ [Session ID]        : web-session-1
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 8125.54ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : syllabus_query
+    - Sub-Intent     : None
+    - Confidence     : 0.40
+    - Extracted Entity: None
+    - Latency        : 0.14ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: What is my syllabus?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "Your syllabus is available on the course website under the 'Resources' tab. You can also access it through the online learning management system."
+    - Latency        : 0.3886s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "Your syllabus is available on the course website under the 'Resources' tab. You can also access it through the online learning management system."
+    - Latency        : 0.08ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 12304.38ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 20.8207s
+========================================================================
+
+2026-05-22 17:06:36 | ERROR    | backend.app.ai.orchestrator.memory_manager:update_metadata:44 - Failed to update metadata in Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:36 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my syllabus?'
+ [Session ID]        : web-session-1
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 8132.39ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : syllabus_query
+    - Sub-Intent     : None
+    - Confidence     : 0.40
+    - Extracted Entity: None
+    - Latency        : 0.14ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.01ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: What is my syllabus?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "Your syllabus is available on the course website under the 'Resources' tab. You can also access it through the online learning management system."
+    - Latency        : 0.2529s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "Your syllabus is available on the course website under the 'Resources' tab. You can also access it through the online learning management system."
+    - Latency        : 0.06ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 12231.61ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 20.6194s
+========================================================================
+
+2026-05-22 17:06:41 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my syllabus?' | session: web-session-1
+2026-05-22 17:06:41 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'What is my syllabus?' | session: web-session-1
+2026-05-22 17:06:45 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:46 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:49 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:49 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: syllabus_query (conf: 0.4) | entity: None
+2026-05-22 17:06:49 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 17:06:50 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:50 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: syllabus_query (conf: 0.4) | entity: None
+2026-05-22 17:06:50 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 17:06:54 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:54 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:58 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:06:58 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:07:02 | ERROR    | backend.app.ai.orchestrator.memory_manager:update_metadata:44 - Failed to update metadata in Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:07:02 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my syllabus?'
+ [Session ID]        : web-session-1
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 8142.39ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : syllabus_query
+    - Sub-Intent     : None
+    - Confidence     : 0.40
+    - Extracted Entity: None
+    - Latency        : 0.16ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.02ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.03ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: What is my syllabus?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : "Your syllabus is available on the course website under the 'Resources' tab. You can also access it through the online learning management system."
+    - Latency        : 0.3687s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : "Your syllabus is available on the course website under the 'Resources' tab. You can also access it through the online learning management system."
+    - Latency        : 0.07ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 12176.27ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 20.6895s
+========================================================================
+
+2026-05-22 17:07:02 | ERROR    | backend.app.ai.orchestrator.memory_manager:update_metadata:44 - Failed to update metadata in Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 17:07:02 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'What is my syllabus?'
+ [Session ID]        : web-session-1
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 8120.86ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : syllabus_query
+    - Sub-Intent     : None
+    - Confidence     : 0.40
+    - Extracted Entity: None
+    - Latency        : 0.16ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : False
+    - Context Length : 0 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+System Instruction: You are a campus assistant. Answer ONLY using the provided data. Be concise (1-2 sentences max). Never add extra information. Never start your reply with 'Assistant:' or 'User:'.
+
+Current User Query: What is my syllabus?
+
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Your syllabus is available on the course website under the "Resources" tab. You can also access it through the online learning management system.'
+    - Latency        : 0.2608s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Your syllabus is available on the course website under the "Resources" tab. You can also access it through the online learning management system.'
+    - Latency        : 0.06ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 12156.89ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 20.5397s
+========================================================================
+

@@ -172,8 +172,8 @@ export function useVoiceSocket(sessionId = "web-session-1") {
     audioCtxRef.current = audioCtx
     const source = audioCtx.createMediaStreamSource(stream)
 
-    // ScriptProcessor — widely supported, no worklet needed
-    const processor = audioCtx.createScriptProcessor(SAMPLE_RATE * CHUNK_MS / 1000, 1, 1)
+    // ScriptProcessor — widely supported, no worklet needed. Buffer size must be a power of 2.
+    const processor = audioCtx.createScriptProcessor(4096, 1, 1)
     processorRef.current = processor
 
     processor.onaudioprocess = (e) => {
