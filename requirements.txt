@@ -1,47 +1,51 @@
 # ── Web Framework ──────────────────────────────────────────────────────────────
 fastapi==0.111.0
-uvicorn[standard]==0.29.0          # ASGI server with WebSocket support
+uvicorn[standard]==0.29.0
 starlette==0.37.2
+websockets>=12.0
 
 # ── Database ───────────────────────────────────────────────────────────────────
-sqlalchemy==2.0.30                 # ORM with async support
-asyncpg==0.29.0                    # Async PostgreSQL driver
-psycopg[binary]                    # PostgreSQL driver (psycopg v3 fallback)
-alembic==1.13.1                    # Database migration tool
+sqlalchemy==2.0.30
+asyncpg==0.29.0
+psycopg[binary]
+alembic==1.13.1
 
 # ── Authentication ────────────────────────────────────────────────────────────
-python-jose[cryptography]==3.3.0   # JWT creation & verification
-passlib[bcrypt]==1.7.4             # Password hashing (bcrypt)
-python-multipart==0.0.9            # OAuth2 form parsing
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.9
 
 # ── AI: STT ───────────────────────────────────────────────────────────────────
-faster-whisper                     # Whisper model (faster-whisper library)
-sounddevice                        # Microphone input
-numpy                              # Audio array processing
-scipy                              # WAV file writing
+faster-whisper
+sounddevice
+numpy
+scipy
+webrtcvad-wheels                   # VAD (Voice Activity Detection) — Windows compatible
 
 # ── AI: TTS ───────────────────────────────────────────────────────────────────
-edge-tts                           # Microsoft Edge neural TTS
-pygame                             # Audio playback for edge-tts
-pyttsx3                            # Offline TTS fallback
+edge-tts
+pygame
+pyttsx3
 
-# ── AI: LLM & RAG ─────────────────────────────────────────────────────────────
-ollama                             # Local LLM via Ollama
-sentence-transformers              # Embeddings
-chromadb                           # Vector store
-pymupdf                            # PDF text extraction
-pdfplumber                         # PDF table extraction
+# ── AI: LLM ───────────────────────────────────────────────────────────────────
+groq                               # Groq API client (llama-3.1-8b-instant)
+httpx>=0.27.0                      # Async HTTP client
+
+# ── AI: RAG (optional) ────────────────────────────────────────────────────────
+sentence-transformers
+chromadb
+pymupdf
+pdfplumber
 
 # ── Utilities ────────────────────────────────────────────────────────────────
-pydantic==2.7.1                    # Data validation
-pydantic[email]==2.7.1             # EmailStr support
-pydantic-settings==2.2.1           # BaseSettings
-python-dotenv==1.0.1               # .env loading
-loguru                             # Structured logging
-redis[hiredis]==5.0.4               # Async Redis client
-aiofiles==23.2.1                   # Async file I/O
+pydantic==2.7.1
+pydantic[email]==2.7.1
+pydantic-settings==2.2.1
+python-dotenv==1.0.1
+loguru
+redis[hiredis]==5.0.4
+aiofiles==23.2.1
 
 # ── Testing ──────────────────────────────────────────────────────────────────
-httpx==0.27.0                      # Async HTTP client
 pytest==8.2.0
 pytest-asyncio==0.23.6
