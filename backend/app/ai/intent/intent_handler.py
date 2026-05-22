@@ -4,6 +4,7 @@ from backend.app.ai.session.session import get as get_session, update as update_
 from backend.app.ai.handlers.greeting_handler    import handle_greeting, handle_thanks, handle_farewell
 from backend.app.ai.handlers.fees_handler         import handle_fees
 from backend.app.ai.handlers.documents_handler    import handle_documents
+from backend.app.ai.handlers.counseling_handler   import handle_counseling
 from backend.app.ai.handlers.admission_handler    import (
     handle_cutoff, handle_eligibility, handle_admission_dates,
     handle_admission_process, handle_branches, handle_placements,
@@ -32,6 +33,7 @@ _ROUTER = {
     "contact":            lambda q, s, e: handle_contact(q, s),
     "office_timing":      lambda q, s, e: handle_office_timing(q, s),
     "office_location":    lambda q, s, e: handle_office_location(q, s),
+    "counseling":         lambda q, s, e: handle_counseling(q, s),
 
     "hostel_rules":       lambda q, s, e: handle_rag(q),
     "syllabus_query":     lambda q, s, e: handle_rag(q),

@@ -2,7 +2,7 @@
   "placements": {
     "average_package": "Rs. 4.5 LPA",
     "highest_package": "Rs. 18 LPA",
-    "top_recruiters": ["TCS", "Infosys", "Wipro", "Cognizant", "Capgemini", "L&T", "Persistent"],
+    "top_recruiters": ["TCS", "Infosys", "Wipro", "Cognizant", "Capgemini", "L&T", "Persistent", "Accenture", "HCL"],
     "placement_rate": "85% of eligible students placed",
     "by_branch": {
       "computer engineering": "Average Rs. 6 LPA, highest Rs. 18 LPA",
@@ -44,7 +44,7 @@
   },
   "scholarship": {
     "government": "EBC, OBC, SC/ST scholarships available via MahaDBT portal",
-    "institute": "Merit scholarship for students above 9.0 CGPA",
+    "institute": "Merit scholarship for students above 9.0 CGPA — up to Rs. 20,000 per year",
     "sports": "Sports quota scholarship available",
     "contact": "scholarship@college.edu"
   },
@@ -69,11 +69,14 @@
   },
   "college_timing": "9 AM to 5 PM, Monday to Saturday",
   "faq": {
-    "lateral_entry": "Yes, lateral entry is available for diploma holders into second year.",
-    "nri_quota": "Yes, NRI quota seats are available. Contact admissions office for details.",
-    "management_quota": "Yes, management quota seats are available.",
+    "lateral_entry": "Yes, lateral entry is available for diploma holders into second year via MHT-CET (diploma) exam.",
+    "nri_quota": "Yes, NRI quota seats are available (5% of total intake). Contact admissions office for details.",
+    "management_quota": "Yes, management quota seats (15%) are available. Contact admissions office directly.",
     "ragging": "Ragging is strictly prohibited. Report to anti-ragging committee at 1800-180-5522.",
     "transport": "College bus facility available from major areas in Pune. Contact transport office.",
-    "sports": "Sports facilities include cricket ground, basketball court, indoor badminton, and gym."
+    "sports": "Sports facilities include cricket ground, basketball court, indoor badminton, and gym.",
+    "affiliation": "VIT Pune is affiliated to Savitribai Phule Pune University (SPPU) and is an autonomous institution.",
+    "naac": "The college is NAAC accredited with A grade.",
+    "established": "VIT Pune was established in 1983 and has over 40 years of academic excellence."
   }
 }

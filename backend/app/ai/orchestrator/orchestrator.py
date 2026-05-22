@@ -77,9 +77,11 @@ async def process_query(
             sources = [f"JSON:{intent}"]
 
         elif route == Route.GENERAL_LLM and intent in ("greeting", "thanks", "farewell"):
-            _quick = {"greeting": "Hello! How can I help you today?",
-                      "thanks": "You're welcome! Is there anything else I can help you with?",
-                      "farewell": "Goodbye! Have a great day!"}
+            _quick = {
+                "greeting": "Hello! I'm Aria, your AI admission counselor at VIT Pune. How can I help you today?",
+                "thanks": "You're welcome! Feel free to ask if you have any more questions about admissions, fees, hostel, or anything else.",
+                "farewell": "Goodbye! Best of luck with your admission. Feel free to call back anytime you need help!"
+            }
             direct_response = _quick[intent]
             context_data = direct_response
             sources = []
@@ -138,6 +140,9 @@ async def process_query(
         meta = {"intent": intent}
         if entity is not None:
             meta["branch"] = entity
+        # Preserve branch across turns if not detected in current query
+        elif metadata.get("branch") and intent not in ("greeting", "thanks", "farewell", "general_chat"):
+            meta["branch"] = metadata["branch"]
         await memory_manager.update_metadata(session_id, **meta)
         latencies["memory_update"] = time.perf_counter() - step8_start
 

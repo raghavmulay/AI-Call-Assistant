@@ -1,0 +1,87 @@
+{
+  "clubs": {
+    "technical": [
+      "Coding Club — competitive programming, hackathons, open source",
+      "Robotics Club — builds robots for national competitions",
+      "IEEE Student Branch — technical talks, workshops, paper presentations",
+      "AI/ML Club — machine learning projects and workshops",
+      "Cybersecurity Club — CTF competitions and ethical hacking workshops",
+      "Web Development Club — full-stack projects and freelancing guidance"
+    ],
+    "cultural": [
+      "Drama Club — annual theatre productions",
+      "Music Club — band performances and college events",
+      "Dance Club — classical and western dance performances",
+      "Photography Club — campus events and competitions",
+      "Literary Club — debates, quizzes, creative writing"
+    ],
+    "social": [
+      "NSS (National Service Scheme) — community service activities",
+      "NCC — National Cadet Corps unit available",
+      "Entrepreneurship Cell (E-Cell) — startup mentoring and competitions",
+      "Environment Club — sustainability initiatives"
+    ]
+  },
+  "events": {
+    "technical_fest": {
+      "name": "TechVIT",
+      "frequency": "Annual",
+      "description": "College's flagship technical festival with hackathons, coding competitions, robotics events, and guest lectures from industry experts"
+    },
+    "cultural_fest": {
+      "name": "Viva",
+      "frequency": "Annual",
+      "description": "Annual cultural festival with music, dance, drama, fashion show, and celebrity performances"
+    },
+    "sports_meet": {
+      "name": "Spardha",
+      "frequency": "Annual",
+      "description": "Inter-college sports tournament with cricket, football, basketball, badminton, and athletics"
+    },
+    "hackathons": "Multiple hackathons organized throughout the year, including 24-hour and 48-hour formats",
+    "workshops": "Regular industry workshops on emerging technologies like AI, cloud computing, IoT, and blockchain"
+  },
+  "sports": {
+    "outdoor": ["Cricket ground", "Football field", "Basketball court", "Volleyball court", "Athletics track"],
+    "indoor": ["Badminton courts (4)", "Table tennis", "Chess", "Carrom"],
+    "gym": "Fully equipped gymnasium with modern equipment, open 6 AM to 9 PM",
+    "achievements": "College teams regularly participate in inter-university tournaments under Savitribai Phule Pune University"
+  },
+  "infrastructure": {
+    "library": {
+      "books": "50,000+ books and reference materials",
+      "digital": "Access to IEEE Xplore, Springer, and NPTEL digital libraries",
+      "timing": "8 AM to 8 PM, Monday to Saturday",
+      "location": "Second Floor, Central Building"
+    },
+    "labs": "State-of-the-art computer labs with 500+ systems, all with high-speed internet",
+    "cafeteria": {
+      "available": true,
+      "timing": "8 AM to 8 PM",
+      "options": "Multiple food stalls with North Indian, South Indian, Chinese, and fast food options",
+      "price_range": "Affordable — meals starting from Rs. 40"
+    },
+    "auditorium": "1200-seat air-conditioned auditorium for events and seminars",
+    "seminar_halls": "Multiple seminar halls with projectors and audio systems",
+    "medical": "On-campus medical room with a doctor available on working days"
+  },
+  "transportation": {
+    "college_bus": "College bus service available from major areas in Pune including Swargate, Katraj, Hadapsar, Kothrud, Wakad, and Hinjewadi",
+    "bus_pass": "Semester bus pass available at subsidized rates",
+    "nearest_metro": "Nearest metro station: 2 km from campus",
+    "auto_rickshaw": "Auto rickshaws and cabs easily available near campus gate"
+  },
+  "campus_timing": "9 AM to 5 PM, Monday to Saturday. Hostel students have 24x7 campus access.",
+  "internet": "Campus-wide Wi-Fi with 1 Gbps internet connectivity",
+  "coding_culture": {
+    "description": "VIT Pune has a strong coding culture. Many students participate in competitive programming on Codeforces, LeetCode, and HackerRank.",
+    "achievements": "Students have cleared Google, Microsoft, and Amazon interviews. Multiple students selected for FAANG companies.",
+    "open_source": "Active open source contribution culture. Students contribute to GitHub projects.",
+    "startups": "Several student startups have emerged from the college, supported by the E-Cell."
+  },
+  "innovation": {
+    "incubation": "College has a startup incubation center supporting student entrepreneurs",
+    "research": "Students can participate in funded research projects under faculty guidance",
+    "patents": "Students have filed patents in areas of IoT, AI, and renewable energy"
+  }
+}

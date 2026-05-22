@@ -106,10 +106,10 @@ async def audio_stream_endpoint(websocket: WebSocket, session_id: str):
                         })
                     except Exception:
                         pass
-                continue  # don't process STT while TTS is playing
+                continue  # don't process STT while AI is responding
 
             # Skip if AI is processing (not yet interruptible)
-            if state.voice_state == VoiceState.PROCESSING:
+            if conversation_state.is_busy(session_id):
                 continue
 
             # ── STT pipeline ──────────────────────────────────────────────────
@@ -170,6 +170,9 @@ async def _idle_watchdog(websocket: WebSocket, session_id: str):
             session = await session_manager.get(session_id)
             if session is None:
                 break
+            # Don't close while AI is actively responding
+            if conversation_state.is_busy(session_id):
+                continue
             if time.time() - session.last_activity_at >= IDLE_TIMEOUT:
                 stream_logger.log_session_timeout(session_id)
                 await send_error(websocket, session_id, "idle_timeout", "Closed due to inactivity.")

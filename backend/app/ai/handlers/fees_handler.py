@@ -13,7 +13,18 @@ def handle_fees(query: str = "", sub_intent: str = None, entity: str = None) -> 
     data = _load()
 
     if sub_intent == "hostel_fee":
-        return f"Hostel fee: Rs. 60,000 per year including mess."
+        # Pull from hostel knowledge to avoid hardcoded duplication
+        try:
+            from backend.app.ai.knowledge.hostel import hostel as _hs
+            h = _hs.load()
+            fb = h.get("fee_breakdown", {})
+            return (
+                f"Hostel fee is {h.get('fee', 'Rs. 60,000 per year')}. "
+                f"Breakdown: accommodation {fb.get('accommodation', 'Rs. 40,000')}, "
+                f"mess {fb.get('mess', 'Rs. 20,000')} per year."
+            )
+        except Exception:
+            return "Hostel fee: Rs. 60,000 per year (accommodation + mess)."
 
     if sub_intent == "exam_fee":
         return f"Exam fee: {data['exam_fee']}."

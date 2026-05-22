@@ -3,18 +3,48 @@
     "10th marksheet and passing certificate",
     "12th marksheet and passing certificate",
     "Transfer Certificate (TC) from previous institution",
-    "Migration Certificate (if from outside state board)",
-    "Aadhar Card (self and parent)",
+    "Migration Certificate (if from outside Maharashtra State Board)",
+    "Aadhar Card (self and parent/guardian)",
     "Passport size photographs (6 copies)",
-    "Caste certificate (if applicable)",
-    "Income certificate (if applying for scholarship)",
-    "Domicile certificate",
-    "Medical fitness certificate"
+    "Caste certificate (if applicable — SC/ST/OBC/NT/SBC)",
+    "Caste validity certificate (for SC/ST candidates)",
+    "Non-creamy layer certificate (for OBC/NT/SBC candidates)",
+    "Income certificate (if applying for scholarship or EBC category)",
+    "Domicile certificate (Maharashtra domicile required for state quota)",
+    "Medical fitness certificate from a registered medical practitioner",
+    "Gap certificate (if there is a gap year after 12th)",
+    "Anti-ragging undertaking (signed by student and parent)",
+    "MHT-CET or JEE Main scorecard",
+    "CAP allotment letter (from DTE Maharashtra)"
   ],
+  "originals_required": true,
+  "photocopies_required": "2 self-attested photocopies of each document",
   "document_submission": {
     "mode": "Physical submission at admission office",
     "timing": "9 AM to 4 PM on working days",
-    "office": "Student Section, Ground Floor, Building 1"
+    "office": "Student Section, Ground Floor, Admin Block, near Main Gate",
+    "contact": "020-12345678"
   },
-  "notes": "All documents must be submitted in original along with 2 self-attested photocopies."
+  "gap_certificate": {
+    "required_when": "If there is a gap of one or more years between 12th and admission",
+    "format": "Affidavit on Rs. 100 stamp paper stating reason for gap",
+    "notarized": true
+  },
+  "lateral_entry_documents": [
+    "Diploma marksheets (all semesters)",
+    "Diploma passing certificate",
+    "Transfer Certificate from polytechnic",
+    "Aadhar Card",
+    "Caste certificate (if applicable)",
+    "MHT-CET (diploma) scorecard"
+  ],
+  "nri_quota_documents": [
+    "Passport copy of student and sponsor",
+    "Visa copy",
+    "Proof of NRI status (employment/residence abroad)",
+    "Relationship proof between student and NRI sponsor",
+    "Bank statement showing foreign income"
+  ],
+  "notes": "All documents must be submitted in original along with 2 self-attested photocopies. Originals will be returned after verification. Keep additional copies for your own records.",
+  "document_verification_timing": "11th July to 15th July 2025 at the admission office."
 }

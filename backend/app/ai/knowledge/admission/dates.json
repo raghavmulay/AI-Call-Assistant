@@ -4,60 +4,62 @@
     "application_end": "30th June 2025",
     "merit_list_1": "10th July 2025",
     "merit_list_2": "20th July 2025",
-    "document_verification": "11th July – 15th July 2025",
+    "document_verification": "11th July to 15th July 2025",
     "fee_payment_deadline": "18th July 2025",
-    "classes_begin": "1st August 2025"
+    "classes_begin": "1st August 2025",
+    "spot_round": "Late July 2025 (if seats remain after CAP rounds)"
   },
   "cutoff": {
     "general": "Above 75% in PCM",
     "obc": "Above 65% in PCM",
-    "sc_st": "Above 50% in PCM"
+    "sc_st": "Above 50% in PCM",
+    "ews": "Above 65% in PCM",
+    "note": "Cutoffs vary by branch and change every year based on demand. Computer Engineering has the highest cutoff.",
+    "by_branch": {
+      "computer engineering": "General: 85%+, OBC: 75%+",
+      "information technology": "General: 80%+, OBC: 70%+",
+      "electronics and telecommunication": "General: 70%+, OBC: 60%+",
+      "mechanical engineering": "General: 65%+, OBC: 55%+",
+      "civil engineering": "General: 60%+, OBC: 50%+",
+      "electrical engineering": "General: 65%+, OBC: 55%+"
+    }
   },
   "eligibility": {
-    "qualification": "12th pass with Physics, Chemistry, Mathematics",
-    "percentage": "50% aggregate (45% for reserved categories)",
-    "entrance_exam": "MHT-CET or JEE Main score required"
+    "qualification": "12th pass with Physics, Chemistry, Mathematics (PCM)",
+    "percentage": "50% aggregate in PCM (45% for reserved categories)",
+    "entrance_exam": "MHT-CET or JEE Main score required",
+    "age_limit": "No upper age limit for engineering admissions in Maharashtra",
+    "lateral_entry": "Diploma holders can apply for direct second year admission via MHT-CET (diploma) exam"
   },
   "process": {
     "steps": [
-      "Register on MHT-CET portal",
-      "Fill CAP application form",
-      "Upload documents online",
-      "Attend document verification",
-      "Pay fees after allotment"
+      "Appear for MHT-CET or JEE Main entrance exam",
+      "Register on DTE Maharashtra CAP portal at cetcell.mahacet.org",
+      "Fill CAP application form and upload documents online",
+      "Participate in CAP rounds (online preference filling)",
+      "Receive allotment letter after each CAP round",
+      "Report to college for document verification",
+      "Pay tuition fees to confirm admission"
     ],
-    "portal": "cetcell.mahacet.org"
+    "portal": "cetcell.mahacet.org",
+    "cap_rounds": "Typically 3 CAP rounds are conducted. Students can upgrade in subsequent rounds.",
+    "note": "Management quota and NRI quota admissions are handled directly by the college."
   },
-  "fees": {
-    "tuition_per_year": "Rs. 1,20,000",
-    "by_branch": {
-      "computer engineering": "Rs. 1,20,000 per year",
-      "information technology": "Rs. 1,20,000 per year",
-      "electronics and telecommunication": "Rs. 1,10,000 per year",
-      "mechanical engineering": "Rs. 1,00,000 per year",
-      "civil engineering": "Rs. 95,000 per year",
-      "electrical engineering": "Rs. 1,00,000 per year"
-    },
-    "exam_fee": "Rs. 2,000 per semester",
-    "payment_modes": ["Online NEFT/RTGS", "DD in favour of college", "Online portal"],
-    "scholarship_note": "SC/ST/OBC students may be eligible for government scholarships. Contact admin."
+  "quotas": {
+    "state_quota": "80% seats filled through CAP (DTE Maharashtra)",
+    "management_quota": "15% seats — direct admission by college management",
+    "nri_quota": "5% seats — for NRI/OCI/PIO candidates",
+    "lateral_entry": "10% additional seats for diploma holders in second year"
   },
-  "documents": {
-    "required": [
-      "10th marksheet and passing certificate",
-      "12th marksheet and passing certificate",
-      "Transfer Certificate (TC)",
-      "Aadhar Card (self and parent)",
-      "Passport size photographs (6 copies)",
-      "Caste certificate (if applicable)",
-      "Income certificate (if applying for scholarship)",
-      "Domicile certificate"
-    ],
-    "submission": {
-      "office": "Student Section, Ground Floor, Building 1",
-      "timing": "9 AM to 4 PM on working days"
-    },
-    "note": "Originals + 2 self-attested photocopies required."
+  "reservation": {
+    "sc": "13% reservation",
+    "st": "7% reservation",
+    "obc": "19% reservation",
+    "ews": "10% reservation",
+    "nt": "3.5% reservation",
+    "sbc": "2% reservation",
+    "pwd": "5% horizontal reservation",
+    "note": "Reservation norms as per Maharashtra government rules"
   },
   "branches": {
     "available": [
@@ -77,5 +79,32 @@
       "civil engineering": "60 seats",
       "electrical engineering": "60 seats"
     }
+  },
+  "fees": {
+    "tuition_per_year": "Rs. 1,20,000 (Computer/IT), Rs. 1,10,000 (ENTC), Rs. 1,00,000 (Mech/Electrical), Rs. 95,000 (Civil)",
+    "exam_fee": "Rs. 2,000 per semester",
+    "payment_modes": ["Online NEFT/RTGS", "DD in favour of college", "Online portal", "UPI/Net Banking"],
+    "scholarship_note": "SC/ST/OBC/EBC students may be eligible for government scholarships via MahaDBT portal."
+  },
+  "documents": {
+    "required": [
+      "10th marksheet and passing certificate",
+      "12th marksheet and passing certificate",
+      "Transfer Certificate (TC)",
+      "Migration Certificate (if applicable)",
+      "Aadhar Card (self and parent)",
+      "Passport size photographs (6 copies)",
+      "Caste certificate (if applicable)",
+      "Income certificate (if applying for scholarship)",
+      "Domicile certificate",
+      "MHT-CET or JEE Main scorecard",
+      "CAP allotment letter",
+      "Anti-ragging undertaking"
+    ],
+    "submission": {
+      "office": "Student Section, Ground Floor, Admin Block",
+      "timing": "9 AM to 4 PM on working days"
+    },
+    "note": "Originals + 2 self-attested photocopies required."
   }
 }

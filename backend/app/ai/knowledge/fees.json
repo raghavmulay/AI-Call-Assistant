@@ -3,7 +3,8 @@
     "first_year": "Rs. 1,20,000 per year",
     "second_year": "Rs. 1,20,000 per year",
     "third_year": "Rs. 1,20,000 per year",
-    "fourth_year": "Rs. 1,20,000 per year"
+    "fourth_year": "Rs. 1,20,000 per year",
+    "note": "Fees are approved by the Shikshan Shulkha Samiti (Fee Regulatory Authority) and remain fixed for the entire course duration."
   },
   "by_branch": {
     "computer engineering": "Rs. 1,20,000 per year",
@@ -14,13 +15,33 @@
     "electrical engineering": "Rs. 1,00,000 per year"
   },
   "hostel_fee": {
-    "per_year": "Rs. 60,000 per year (includes mess)"
+    "per_year": "Rs. 60,000 per year (includes mess)",
+    "mess_included": true,
+    "note": "Hostel fee covers accommodation and three meals a day. Wi-Fi and laundry are included."
   },
   "other_fees": {
     "exam_fee": "Rs. 2,000 per semester",
     "library_fee": "Rs. 1,500 per year",
-    "development_fee": "Rs. 5,000 per year"
+    "development_fee": "Rs. 5,000 per year",
+    "lab_fee": "Rs. 3,000 per year",
+    "sports_fee": "Rs. 1,000 per year",
+    "alumni_fee": "Rs. 500 one-time"
   },
-  "payment_modes": ["Online NEFT/RTGS", "DD in favour of college", "Online portal"],
-  "scholarship_note": "SC/ST/OBC students may be eligible for government scholarships. Contact admin for details."
+  "total_annual_cost": {
+    "day_scholar": "Approximately Rs. 1,30,000 to Rs. 1,35,000 per year (tuition + other fees)",
+    "hosteller": "Approximately Rs. 1,90,000 to Rs. 2,00,000 per year (tuition + hostel + other fees)"
+  },
+  "installment_options": {
+    "available": true,
+    "details": "Fees can be paid in two installments per year — first installment at the time of admission, second installment by January."
+  },
+  "refund_policy": {
+    "before_cutoff": "Full refund if withdrawal before the last CAP round cutoff date.",
+    "after_cutoff": "Partial refund as per DTE Maharashtra norms. Processing fee of Rs. 1,000 is non-refundable.",
+    "contact": "accounts@college.edu"
+  },
+  "payment_modes": ["Online NEFT/RTGS", "DD in favour of college", "Online portal", "UPI/Net Banking"],
+  "scholarship_note": "SC/ST/OBC/EBC students may be eligible for full or partial fee waiver via MahaDBT portal. Merit scholarship available for CGPA above 9.0.",
+  "hidden_charges": "There are no hidden charges. All fees are transparently listed in the admission brochure.",
+  "fee_hike": "Fee revision is subject to government approval and is typically minimal — around 5% every two years."
 }

@@ -65,8 +65,7 @@ def _transcribe_pcm(pcm: bytes) -> str:
         buf,
         language="en",
         beam_size=1,
-        vad_filter=True,
-        vad_parameters={"min_silence_duration_ms": 300},
+        vad_filter=False,
     )
     return " ".join(s.text.strip() for s in segments).strip()
 

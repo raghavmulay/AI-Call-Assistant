@@ -1,20 +1,75 @@
 {
-  "average_package": "Rs. 4.5 LPA",
-  "highest_package": "Rs. 18 LPA",
-  "placement_rate": "85% of eligible students",
-  "top_recruiters": ["TCS", "Infosys", "Wipro", "Cognizant", "Capgemini", "L&T", "Persistent"],
+  "overview": {
+    "placement_rate": "85% of eligible students placed",
+    "average_package": "Rs. 4.5 LPA",
+    "highest_package": "Rs. 18 LPA",
+    "companies_visited": "120+ companies visit campus annually",
+    "year": "2024-25 placement season"
+  },
   "by_branch": {
-    "computer engineering": "Average Rs. 6 LPA, highest Rs. 18 LPA",
-    "information technology": "Average Rs. 5.5 LPA, highest Rs. 16 LPA",
-    "electronics and telecommunication": "Average Rs. 4 LPA, highest Rs. 12 LPA",
-    "mechanical engineering": "Average Rs. 3.5 LPA, highest Rs. 10 LPA",
-    "civil engineering": "Average Rs. 3 LPA, highest Rs. 8 LPA",
-    "electrical engineering": "Average Rs. 3.5 LPA, highest Rs. 10 LPA"
+    "computer engineering": {
+      "average": "Rs. 6 LPA",
+      "highest": "Rs. 18 LPA",
+      "placement_rate": "92%",
+      "top_companies": ["TCS", "Infosys", "Wipro", "Persistent", "Capgemini", "Accenture", "Cognizant"]
+    },
+    "information technology": {
+      "average": "Rs. 5.5 LPA",
+      "highest": "Rs. 16 LPA",
+      "placement_rate": "90%",
+      "top_companies": ["TCS", "Infosys", "Wipro", "HCL", "Tech Mahindra", "Mphasis"]
+    },
+    "electronics and telecommunication": {
+      "average": "Rs. 4 LPA",
+      "highest": "Rs. 12 LPA",
+      "placement_rate": "78%",
+      "top_companies": ["L&T", "Siemens", "Bosch", "Honeywell", "Qualcomm", "Texas Instruments"]
+    },
+    "mechanical engineering": {
+      "average": "Rs. 3.5 LPA",
+      "highest": "Rs. 10 LPA",
+      "placement_rate": "75%",
+      "top_companies": ["Tata Motors", "Mahindra", "Cummins", "Thermax", "Forbes Marshall", "Bajaj Auto"]
+    },
+    "civil engineering": {
+      "average": "Rs. 3 LPA",
+      "highest": "Rs. 8 LPA",
+      "placement_rate": "70%",
+      "top_companies": ["L&T Construction", "Shapoorji Pallonji", "Godrej Properties", "Afcons"]
+    },
+    "electrical engineering": {
+      "average": "Rs. 3.5 LPA",
+      "highest": "Rs. 10 LPA",
+      "placement_rate": "74%",
+      "top_companies": ["Siemens", "ABB", "Schneider Electric", "BHEL", "MSEDCL"]
+    }
+  },
+  "top_recruiters": ["TCS", "Infosys", "Wipro", "Cognizant", "Capgemini", "L&T", "Persistent", "Accenture", "HCL", "Tech Mahindra", "Mphasis", "Siemens", "Bosch", "Tata Motors", "Mahindra"],
+  "internships": {
+    "available": true,
+    "semester": "6th and 7th semester internships encouraged",
+    "stipend_range": "Rs. 5,000 to Rs. 25,000 per month depending on company",
+    "companies": "Many placement companies also offer pre-placement internships",
+    "note": "Students with internship experience have significantly higher placement rates"
+  },
+  "placement_training": {
+    "available": true,
+    "details": "Year-round placement training including aptitude, coding, communication, and mock interviews",
+    "coding_platforms": "HackerRank, LeetCode, and CodeChef practice sessions organized",
+    "soft_skills": "Communication and personality development workshops every semester"
+  },
+  "higher_studies": {
+    "gate_coaching": "GATE coaching support available on campus",
+    "gre_gmat": "GRE/GMAT preparation guidance available",
+    "mba": "CAT/MAT preparation support available",
+    "percentage_pursuing": "Approximately 15% students pursue higher studies (GATE/MS/MBA)"
   },
   "scholarship": {
-    "government": "EBC, OBC, SC/ST scholarships via MahaDBT portal",
-    "institute": "Merit scholarship for CGPA above 9.0",
-    "sports": "Sports quota scholarship available",
-    "contact": "scholarship@college.edu"
+    "government": "EBC, OBC, SC/ST scholarships available via MahaDBT portal. Apply at cetcell.mahacet.org",
+    "institute": "Merit scholarship for students above 9.0 CGPA — up to Rs. 20,000 per year",
+    "sports": "Sports quota scholarship available for state/national level athletes",
+    "minority": "Minority scholarship available for eligible students",
+    "contact": "scholarship@college.edu",
+    "deadline": "Scholarship applications typically open in September each year"
   }
 }

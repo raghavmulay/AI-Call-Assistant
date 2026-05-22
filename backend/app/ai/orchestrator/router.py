@@ -4,7 +4,7 @@ Decides which retrieval layer or logic to use based on intent.
 """
 
 from enum import Enum
-from typing import Tuple, Optional
+from typing import Optional
 
 class Route(Enum):
     STRUCTURED_RETRIEVAL = "structured"  # JSON data (fees, dates, etc.)
@@ -18,18 +18,18 @@ class Router:
         """
         Determines the appropriate routing logic based on the detected intent and confidence.
         """
-        
+
         # ── 0. Confidence Check ────────────────────────────────────
-        # If confidence is too low, treat as general chat/exploration
         if confidence < 0.3:
             return Route.GENERAL_LLM
 
         # ── 1. Structured Retrieval (JSON) ─────────────────────────
         structured_intents = {
-            "fees", "admission_dates", "admission_process", 
-            "branches", "placements", "scholarship", 
-            "hostel", "contact", "office_timing", "office_location",
-            "cutoff", "eligibility", "documents"
+            "fees", "admission_dates", "admission_process",
+            "branches", "placements", "scholarship",
+            "hostel", "hostel_rules", "contact", "office_timing", "office_location",
+            "cutoff", "eligibility", "documents",
+            "campus_life", "counseling", "academics",
         }
         if intent in structured_intents:
             return Route.STRUCTURED_RETRIEVAL
@@ -39,19 +39,11 @@ class Router:
             "attendance", "grades", "timetable", "assignments", "notices", "profile"
         }
         if intent in database_intents:
-            # Moderate confidence required for database queries
             if confidence < 0.4:
                 return Route.GENERAL_LLM
             return Route.DATABASE_RETRIEVAL
 
-        # ── 3. RAG Retrieval — redirected to LLM (RAG disabled) ──
-        rag_intents = {
-            "hostel_rules", "syllabus_query", "policy_query"
-        }
-        if intent in rag_intents:
-            return Route.GENERAL_LLM
-
-        # ── 4. Default to General LLM ────────────────────────────
+        # ── 3. Default to General LLM ────────────────────────────
         return Route.GENERAL_LLM
 
 router = Router()

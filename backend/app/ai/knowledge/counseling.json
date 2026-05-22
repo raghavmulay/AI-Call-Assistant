@@ -1,0 +1,32 @@
+{
+  "branch_guidance": {
+    "best_branch_overall": "Computer Engineering and Information Technology are the most sought-after branches right now due to the booming IT industry. They offer the highest placement rates and packages. However, the best branch is the one that aligns with your interests and strengths.",
+    "cs_vs_it": "Computer Engineering focuses more on core computer science — algorithms, OS, compilers, and hardware-software interaction. IT focuses more on software applications, networking, and enterprise systems. Both have excellent placements. If you love coding and algorithms, go for CS. If you prefer application development and networking, IT is great.",
+    "ai_vs_it": "Both are excellent choices. Computer Engineering (which includes AI/ML electives) gives you a stronger foundation in core CS. IT is more application-focused. For AI/ML careers, students from both branches do equally well — it depends on your self-learning and projects.",
+    "best_for_placements": "Computer Engineering has the highest placement rate at 92% with an average package of Rs. 6 LPA. IT is close behind at 90% with Rs. 5.5 LPA average. Both are excellent for software careers.",
+    "mechanical_future": "Mechanical Engineering has a strong future in core manufacturing, automotive, and aerospace industries. With the rise of electric vehicles and Industry 4.0, mechanical engineers with knowledge of automation and robotics are in high demand. Companies like Tata Motors, Mahindra, Cummins, and Thermax recruit from our campus.",
+    "civil_future": "Civil Engineering offers opportunities in infrastructure, construction, and real estate — sectors that are growing rapidly in India. Government jobs through MPSC/UPSC are also a popular path for civil engineers.",
+    "entc_future": "Electronics and Telecommunication is excellent for careers in embedded systems, VLSI, telecommunications, and IoT. With 5G rollout and smart devices boom, ENTC engineers are in demand at companies like Qualcomm, Texas Instruments, Bosch, and Siemens."
+  },
+  "admission_guidance": {
+    "low_marks": "Even with lower marks, you may still be eligible depending on your category. Reserved category students (OBC, SC, ST) have lower cutoffs. Management quota seats are also available where marks criteria is relaxed. I'd suggest you apply and check your eligibility — don't give up without trying.",
+    "should_choose_college": "VIT Pune is an autonomous institution affiliated to Savitribai Phule Pune University with a strong placement record, active technical culture, and good infrastructure. It's a solid choice for engineering in Pune. The college has produced many successful engineers and entrepreneurs.",
+    "mht_cet_vs_jee": "Both MHT-CET and JEE Main scores are accepted. MHT-CET is the primary exam for Maharashtra state quota seats. JEE Main score can also be used for admission. If you've appeared for both, you can use whichever gives you a better rank.",
+    "management_quota": "Management quota seats are available directly through the college without going through CAP rounds. The eligibility criteria is slightly relaxed but fees may be slightly higher. Contact the admissions office directly for management quota details.",
+    "lateral_entry": "If you have a diploma in engineering, you can directly enter the second year through lateral entry. You need to appear for MHT-CET (diploma) exam. This is a great option to save one year."
+  },
+  "college_life_guidance": {
+    "is_coding_difficult": "Coding can seem challenging at first, but with consistent practice it becomes very manageable. The college has a strong coding culture with clubs, workshops, and peer learning. Most students who practice regularly on platforms like LeetCode and HackerRank become confident coders within a year.",
+    "how_is_college_life": "College life at VIT Pune is vibrant and well-rounded. You'll have technical fests, cultural events, sports competitions, hackathons, and a strong peer community. The campus has good infrastructure, a library, cafeteria, gym, and active student clubs. It's a great environment to grow both technically and personally.",
+    "is_hostel_safe": "Yes, the hostel is safe. There is 24x7 security with CCTV cameras at all entry and exit points. The girls hostel has dedicated female security staff. The warden is always available for any concerns. Ragging is strictly prohibited and the anti-ragging committee is very active.",
+    "is_attendance_strict": "Yes, attendance is taken seriously. You need to maintain a minimum of 75% attendance in each subject to be eligible for exams. However, the college does consider medical emergencies and genuine cases. It's best to be regular — it also helps you learn better.",
+    "hostel_vs_day_scholar": "Both have their advantages. Hostel life gives you independence, peer learning, and a full college experience. Day scholar life gives you home comfort and family support. If you're from outside Pune or want to fully immerse in college life, hostel is recommended.",
+    "first_year_tips": "Focus on building your fundamentals in the first year. Join at least one technical club and one cultural club. Start practicing coding early. Make friends across branches. Attend workshops and seminars. Your first year sets the foundation for everything that follows."
+  },
+  "career_guidance": {
+    "software_career": "For a software career, focus on data structures, algorithms, and one programming language deeply. Build projects, contribute to open source, and practice on LeetCode. Internships in 3rd year are very helpful. Our placement cell provides training and mock interviews.",
+    "core_engineering_career": "For core engineering careers, focus on your fundamentals, get relevant certifications, and look for internships in core companies. GATE exam is also a good option for PSU jobs and higher studies.",
+    "entrepreneurship": "VIT Pune has an active E-Cell and incubation center. If you have a startup idea, you'll find mentors, resources, and a community here. Several successful startups have come out of this college.",
+    "higher_studies": "If you're planning for higher studies, start preparing for GATE from 3rd year. For MS abroad, focus on GRE, TOEFL, and building a strong research profile with projects and publications."
+  }
+}

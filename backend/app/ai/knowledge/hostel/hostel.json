@@ -1,16 +1,69 @@
 {
   "available": true,
-  "boys_hostel": "Yes, capacity 300",
-  "girls_hostel": "Yes, capacity 200",
+  "boys_hostel": {
+    "available": true,
+    "capacity": 300,
+    "rooms": "Single, double, and triple sharing rooms available",
+    "warden": "Mr. Rajesh Patil",
+    "contact": "020-99988877"
+  },
+  "girls_hostel": {
+    "available": true,
+    "capacity": 200,
+    "rooms": "Single and double sharing rooms available",
+    "warden": "Mrs. Sunita Desai",
+    "contact": "020-99988866",
+    "note": "Girls hostel has separate entry gate with 24x7 female security staff"
+  },
   "fee": "Rs. 60,000 per year including mess",
-  "mess_timings": "Breakfast 7-9 AM, Lunch 12-2 PM, Dinner 7-9 PM",
-  "facilities": "Wi-Fi, laundry, common room, 24x7 security",
+  "fee_breakdown": {
+    "accommodation": "Rs. 40,000 per year",
+    "mess": "Rs. 20,000 per year",
+    "total": "Rs. 60,000 per year"
+  },
+  "mess": {
+    "included": true,
+    "timings": {
+      "breakfast": "7:00 AM to 9:00 AM",
+      "lunch": "12:00 PM to 2:00 PM",
+      "snacks": "5:00 PM to 6:00 PM",
+      "dinner": "7:00 PM to 9:00 PM"
+    },
+    "type": "Vegetarian and non-vegetarian options available",
+    "note": "Monthly menu is displayed on the hostel notice board. Special meals on festivals."
+  },
+  "facilities": [
+    "High-speed Wi-Fi (50 Mbps)",
+    "Laundry service",
+    "Common room with TV",
+    "Indoor games (carrom, chess, table tennis)",
+    "24x7 security with CCTV",
+    "Generator backup",
+    "Hot water supply",
+    "Reading room",
+    "Gym access",
+    "Medical room with first aid"
+  ],
+  "rules": {
+    "curfew": {
+      "boys": "11:00 PM",
+      "girls": "9:00 PM",
+      "note": "Late entry requires prior permission from warden"
+    },
+    "visitors": "Visitors allowed 10 AM to 6 PM in common area only. No visitors in rooms.",
+    "leave": "Leave application required for overnight absence. Parents must be informed.",
+    "ragging": "Ragging is strictly prohibited. Anti-ragging committee is active.",
+    "alcohol_drugs": "Strictly prohibited. Immediate expulsion on violation.",
+    "noise": "Silence hours: 10 PM to 6 AM"
+  },
+  "safety": {
+    "cctv": "CCTV cameras installed at all entry/exit points and corridors",
+    "security": "24x7 security guards at main gate",
+    "fire_safety": "Fire extinguishers and smoke detectors installed on every floor",
+    "medical": "Medical room with first aid. Tie-up with nearby hospital for emergencies."
+  },
+  "location": "Hostel Campus, Gate 2, adjacent to main college building",
   "contact": "hostel@college.edu",
   "warden_contact": "020-99988877",
-  "location": "Hostel Campus, Gate 2",
-  "rules": {
-    "curfew": "10 PM for boys, 9 PM for girls",
-    "visitors": "Visitors allowed 10 AM to 6 PM in common area only",
-    "leave": "Leave application required for overnight absence"
-  }
+  "admission_process": "Hostel allotment is done on first-come-first-served basis after college admission confirmation. Apply at hostel office."
 }
