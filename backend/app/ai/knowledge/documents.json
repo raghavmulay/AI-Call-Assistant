@@ -1,0 +1,20 @@
+{
+  "required_documents": [
+    "10th marksheet and passing certificate",
+    "12th marksheet and passing certificate",
+    "Transfer Certificate (TC) from previous institution",
+    "Migration Certificate (if from outside state board)",
+    "Aadhar Card (self and parent)",
+    "Passport size photographs (6 copies)",
+    "Caste certificate (if applicable)",
+    "Income certificate (if applying for scholarship)",
+    "Domicile certificate",
+    "Medical fitness certificate"
+  ],
+  "document_submission": {
+    "mode": "Physical submission at admission office",
+    "timing": "9 AM to 4 PM on working days",
+    "office": "Student Section, Ground Floor, Building 1"
+  },
+  "notes": "All documents must be submitted in original along with 2 self-attested photocopies."
+}

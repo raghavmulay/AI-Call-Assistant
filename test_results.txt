@@ -1,0 +1,18 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-8.2.0, pluggy-1.5.0 -- c:\users\raghav mulay\appdata\local\programs\python\python38\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Raghav\VIT_Pune\SY\Sem II\EDI\Project\AI-Call-Assistant
+configfile: pytest.ini
+plugins: anyio-4.5.2, asyncio-0.23.6
+asyncio: mode=auto
+collecting ... collected 7 items
+
+backend/tests/test_memory.py::test_session_persistence PASSED            [ 14%]
+backend/tests/test_memory.py::test_entity_tracking PASSED                [ 28%]
+backend/tests/test_memory.py::test_history_window_limit PASSED           [ 42%]
+backend/tests/test_routing.py::test_structured_routing PASSED            [ 57%]
+backend/tests/test_routing.py::test_database_routing PASSED              [ 71%]
+backend/tests/test_routing.py::test_rag_routing PASSED                   [ 85%]
+backend/tests/test_routing.py::test_low_confidence_fallback PASSED       [100%]
+
+============================== 7 passed in 0.07s ==============================

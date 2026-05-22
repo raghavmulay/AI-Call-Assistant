@@ -1,0 +1,63 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-8.2.0, pluggy-1.5.0 -- c:\users\raghav mulay\appdata\local\programs\python\python38\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Raghav\VIT_Pune\SY\Sem II\EDI\Project\AI-Call-Assistant
+configfile: pytest.ini
+plugins: anyio-4.5.2, asyncio-0.23.6
+asyncio: mode=auto
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+________________ ERROR collecting backend/tests/test_audit.py _________________
+backend\tests\test_audit.py:3: in <module>
+    from backend.app.ai.orchestrator.orchestrator import process_query
+backend\app\ai\orchestrator\orchestrator.py:14: in <module>
+    from backend.app.ai.orchestrator.services import ai_services
+backend\app\ai\orchestrator\services.py:9: in <module>
+    from backend.app.services.student_service import get_attendance_for_student, get_timetable_for_student
+backend\app\services\student_service.py:29: in <module>
+    from backend.app.models.assignment import Assignment
+backend\app\models\__init__.py:3: in <module>
+    from backend.app.models.student import Student
+backend\app\models\student.py:12: in <module>
+    from backend.app.database.database import Base
+backend\app\database\database.py:9: in <module>
+    from backend.app.core.config import settings
+backend\app\core\config.py:62: in <module>
+    settings = get_settings()
+backend\app\core\config.py:58: in get_settings
+    return Settings()
+c:\users\raghav mulay\appdata\local\programs\python\python38\lib\site-packages\pydantic_settings\main.py:84: in __init__
+    super().__init__(
+E   pydantic_core._pydantic_core.ValidationError: 7 validation errors for Settings
+E   DATABASE_URL
+E     Field required [type=missing, input_value={'DB_HOST': 'localhost', ... 'DB_PASS': 'Dhatura#1'}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.7/v/missing
+E   SECRET_KEY
+E     Field required [type=missing, input_value={'DB_HOST': 'localhost', ... 'DB_PASS': 'Dhatura#1'}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.7/v/missing
+E   DB_HOST
+E     Extra inputs are not permitted [type=extra_forbidden, input_value='localhost', input_type=str]
+E       For further information visit https://errors.pydantic.dev/2.7/v/extra_forbidden
+E   DB_PORT
+E     Extra inputs are not permitted [type=extra_forbidden, input_value='5432', input_type=str]
+E       For further information visit https://errors.pydantic.dev/2.7/v/extra_forbidden
+E   DB_NAME
+E     Extra inputs are not permitted [type=extra_forbidden, input_value='ai_assistant_db', input_type=str]
+E       For further information visit https://errors.pydantic.dev/2.7/v/extra_forbidden
+E   DB_USER
+E     Extra inputs are not permitted [type=extra_forbidden, input_value='postgres', input_type=str]
+E       For further information visit https://errors.pydantic.dev/2.7/v/extra_forbidden
+E   DB_PASS
+E     Extra inputs are not permitted [type=extra_forbidden, input_value='Dhatura#1', input_type=str]
+E       For further information visit https://errors.pydantic.dev/2.7/v/extra_forbidden
+============================== warnings summary ===============================
+..\..\..\..\..\..\..\users\raghav mulay\appdata\local\programs\python\python38\lib\site-packages\pydantic\_internal\_config.py:284
+  c:\users\raghav mulay\appdata\local\programs\python\python38\lib\site-packages\pydantic\_internal\_config.py:284: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.7/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR backend/tests/test_audit.py - pydantic_core._pydantic_core.ValidationEr...
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+========================= 1 warning, 1 error in 2.15s =========================

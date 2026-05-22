@@ -1,0 +1,31 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-8.2.0, pluggy-1.5.0 -- c:\users\raghav mulay\appdata\local\programs\python\python38\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Raghav\VIT_Pune\SY\Sem II\EDI\Project\AI-Call-Assistant
+configfile: pytest.ini
+plugins: anyio-4.5.2, asyncio-0.23.6
+asyncio: mode=auto
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+__________ ERROR collecting backend/tests/test_realtime_readiness.py __________
+ImportError while importing test module 'C:\Raghav\VIT_Pune\SY\Sem II\EDI\Project\AI-Call-Assistant\backend\tests\test_realtime_readiness.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+c:\users\raghav mulay\appdata\local\programs\python\python38\lib\importlib\__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+backend\tests\test_realtime_readiness.py:5: in <module>
+    from backend.app.ai.orchestrator.orchestrator import process_query
+backend\app\ai\orchestrator\orchestrator.py:11: in <module>
+    from backend.app.ai.orchestrator.memory_manager import memory_manager
+backend\app\ai\orchestrator\memory_manager.py:7: in <module>
+    from backend.app.ai.memory.redis_memory import redis_memory
+backend\app\ai\memory\redis_memory.py:3: in <module>
+    from backend.app.core.redis import redis_client
+backend\app\core\redis.py:1: in <module>
+    import redis.asyncio as redis
+E   ModuleNotFoundError: No module named 'redis'
+=========================== short test summary info ===========================
+ERROR backend/tests/test_realtime_readiness.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+============================== 1 error in 0.26s ===============================
