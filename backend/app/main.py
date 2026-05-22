@@ -10,10 +10,12 @@ import asyncio
 import logging
 import sys
 from contextlib import asynccontextmanager
+from pathlib import Path
 from fastapi import FastAPI, Request, status
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.trustedhost import TrustedHostMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from backend.app.core.config import settings
 from backend.app.database.database import create_all_tables
@@ -144,3 +146,15 @@ async def root():
 @app.get("/health", tags=["Health"], summary="Detailed health check")
 async def health():
     return {"status": "healthy", "database": "connected"}
+
+
+# ── Frontend Static Files (production) ───────────────────────────────────────
+_FRONTEND_DIST = Path(__file__).parent.parent.parent.parent / "frontend" / "dist"
+
+if _FRONTEND_DIST.exists():
+    app.mount("/assets", StaticFiles(directory=_FRONTEND_DIST / "assets"), name="assets")
+
+    @app.get("/{full_path:path}", include_in_schema=False)
+    async def serve_spa(full_path: str):
+        """Serve React SPA — return index.html for all non-API routes."""
+        return FileResponse(_FRONTEND_DIST / "index.html")

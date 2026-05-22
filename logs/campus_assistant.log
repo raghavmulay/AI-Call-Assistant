@@ -12248,3 +12248,71 @@ Current User Query: I don't know what you're gonna do.
  [TOTAL LATENCY]     : 0.4817s
 ========================================================================
 
+2026-05-22 15:48:40 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Hello, how are you? Hello, hello' | session: test-1
+2026-05-22 15:48:40 | INFO     | backend.app.core.redis:client:18 - Redis client initialized: redis://localhost:6379/0
+2026-05-22 15:48:43 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:38 - Processing query: 'Hello, how are you? Hello, hello' | session: test-1
+2026-05-22 15:48:44 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:48:47 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_history:21 - Failed to retrieve history from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:48:48 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:48:48 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: greeting (conf: 1.0) | entity: None
+2026-05-22 15:48:48 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 15:48:52 | ERROR    | backend.app.ai.orchestrator.memory_manager:get_metadata:29 - Failed to retrieve metadata from Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:48:52 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:59 - Detected intent: greeting (conf: 1.0) | entity: None
+2026-05-22 15:48:52 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:65 - Selected route: llm
+2026-05-22 15:48:52 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:48:56 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:48:56 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:49:00 | ERROR    | backend.app.ai.orchestrator.memory_manager:add_turn:37 - Failed to add turn to Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:49:00 | ERROR    | backend.app.ai.orchestrator.memory_manager:update_metadata:44 - Failed to update metadata in Redis: Error 22 connecting to localhost:6379. 22.
+2026-05-22 15:49:00 | INFO     | backend.app.ai.orchestrator.orchestrator:process_query:197 - 
+========================================================================
+                     AI ORCHESTRATION FLOW TRACE                        
+========================================================================
+ [Query]             : 'Hello, how are you? Hello, hello'
+ [Session ID]        : test-1
+------------------------------------------------------------------------
+ 1. MEMORY STATE
+    - History Size   : 0 messages
+    - Active Branch  : None
+    - Last Intent    : None
+    - Load Latency   : 8108.06ms
+------------------------------------------------------------------------
+ 2. INTENT DETECTION
+    - Intent         : greeting
+    - Sub-Intent     : None
+    - Confidence     : 1.00
+    - Extracted Entity: None
+    - Latency        : 0.03ms
+------------------------------------------------------------------------
+ 3. ROUTE SELECTION
+    - Selected Route : llm
+    - Latency        : 0.01ms
+------------------------------------------------------------------------
+ 4. DATA RETRIEVAL
+    - Source         : []
+    - Has Data       : True
+    - Context Length : 32 chars
+    - Latency        : 0.00ms
+------------------------------------------------------------------------
+ 5. PROMPT GENERATION
+    - Latency        : 0.00ms
+    - Generated Prompt:
+"""
+[DIRECT — LLM skipped]
+"""
+------------------------------------------------------------------------
+ 6. LLM GENERATION
+    - LLM Response   : 'Hello! How can I help you today?'
+    - Latency        : 0.0000s
+------------------------------------------------------------------------
+ 7. RESPONSE FORMATTING
+    - Final Response : 'Hello! How can I help you today?'
+    - Latency        : 0.04ms
+------------------------------------------------------------------------
+ 8. MEMORY UPDATE
+    - Latency        : 12215.97ms
+------------------------------------------------------------------------
+ [TOTAL LATENCY]     : 20.3245s
+========================================================================
+
+2026-05-22 15:57:39 | INFO     | backend.app.core.redis:client:18 - Redis client initialized: redis://localhost:6379/0
